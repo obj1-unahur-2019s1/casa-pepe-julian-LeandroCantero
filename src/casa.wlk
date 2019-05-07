@@ -4,6 +4,8 @@ import cuentas.*
 object casaDePepeYJulian {
 	const cosas = []
 	var cuenta
+	//const lista = [heladera, cama, paqueteDeFideos, tiraDeAsado, paqueteDeFideos, 
+		//plancha, kgMilanesasRebozadas, botellaSalsaTomate, microondas, kgDeCebollas,computadora,packDeComida]
 	
 	method elegirCuenta(cuentas){cuenta = cuentas}
 	method gastar(importe){cuenta.extraer(importe)}
@@ -38,9 +40,8 @@ object casaDePepeYJulian {
 		return cosas.all({cosa => cosa.esComida()})
 	}
 	
-//queFaltaComprar(lista) : recibe una lista de cosas y devuelve las cosas de esa lista que aún no se han comprado. 
-//Atención: es una pregunta. No se pide que se compren.
-	method queFaltaComprar(lista){
+	method queFaltaComprar(listaCompras){
+		return listaCompras.asSet().difference(cosas)
 	} 
 	
 	method faltaComida(){
