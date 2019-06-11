@@ -47,5 +47,5 @@ object casaDePepeYJulian {
 	method faltaComida(){
 		return cosas.count({cosa => cosa.esComida()}) < 2
 	}
-//1
+
 }
